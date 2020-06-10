@@ -1,0 +1,16 @@
+storage: ./storage
+
+auth:
+        bitbucket:
+                allow: Developers(member)
+                defaultMailDomain: webitects.com
+                hashPassword: true
+packages:
+        '@*/*':
+                access: $all
+                publish: $authenticated
+                proxy: npmjs
+        '**':
+                access: $all
+                publish: $authenticated
+                proxy: npmjs

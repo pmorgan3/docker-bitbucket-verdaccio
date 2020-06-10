@@ -1,0 +1,21 @@
+{
+	"name": "docker-verdaccio-bitbucket",
+	"version": "1.0.0",
+	"description": "dockerized verdaccio with bitbucket authentication",
+	"scripts": {
+		"start": "npm run verdaccio --",
+		"verdaccio": "verdaccio"
+	},
+	"keywords": [
+		"docker",
+		"bitbucket",
+		"verdaccio"
+	],
+	"author": "Paul Morgan III",
+	"license": "MIT",
+	"dependencies": {
+		"bcrypt": "^5.0.0",
+		"verdaccio": "4.6.2",
+		"verdaccio-bitbucket": "2.0.0"
+	}
+}

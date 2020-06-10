@@ -1,0 +1,25 @@
+storage: /verdaccio/storage/data
+
+plugins: /verdaccio/plugins
+
+listen:
+        - 0.0.0.0:4873
+
+auth:
+        bitbucket:
+                allow: Developers(member)
+                defaultMailDomain: webitects.com
+
+packages:
+        '@*/*':
+                access: $all
+                publish: $authenticated
+                proxy: npmjs
+                bitbucket: true
+        '**':
+                access: $all
+                publish: $authenticated
+                proxy: npmjs
+                bitbucket: true
+logs:
+        - { type: stdout, format: pretty, level: info }
